@@ -25,8 +25,6 @@ Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 MFRC522 mfrc522(SS_PIN, RST_PIN);
 LiquidCrystal_I2C lcd(0x27, 16, 2); 
 
-
-
 bool rfidValidated = false;
 bool pinValidated = false;
 
@@ -72,7 +70,6 @@ void loop() {
 
   char key = keypad.getKey();
   static String inputPIN = "";
-  
 
   if (key) {
     if (key == '#') { 
