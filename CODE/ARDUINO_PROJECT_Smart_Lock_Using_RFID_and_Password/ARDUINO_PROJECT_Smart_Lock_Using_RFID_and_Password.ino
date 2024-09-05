@@ -18,8 +18,8 @@ char keys[ROWS][COLS] = {
   {'7', '8', '9', 'C'},
   {'*', '0', '#', 'D'}
 };
-byte rowPins[ROWS] = {A2, A3, 7, 6}; 
-byte colPins[COLS] = {5, 4, 3, 2}; 
+byte rowPins[ROWS] = {2, 3, 4, 5};
+byte colPins[COLS] =  {6, 7, A3, A2};
 
 Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 MFRC522 mfrc522(SS_PIN, RST_PIN);
